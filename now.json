@@ -1,5 +1,6 @@
 {
   "name": "my-example-app",
+  "version": 2,
   "type": "static",
   "static": {
     "public": "dist",
@@ -10,7 +11,7 @@
       }
     ]
   },
-  "alias": "vue-example",
+  "alias": "Testing",
   "files": [
     "dist"
   ]
