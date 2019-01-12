@@ -10,21 +10,24 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-import JobPosts from "@/components/JobPosts.vue";
-import FilterSearch from "@/components/FilterSearch";
+import JobPosts from "./JobPosts.vue";
+import FilterSearch from "./FilterSearch";
 
 export default {
   name: "home",
   components: {
-    HelloWorld,
-    JobPosts,
-    FilterSearch
+    JobPosts: JobPosts,
+    FilterSearch: FilterSearch
+  },
+  data() {
+    return {
+      msg: "Welcome to Jobs"
+    };
   }
 };
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import "../common/styles/common";
 
@@ -69,4 +72,3 @@ li {
   margin: 0 10px;
 }
 </style>
-

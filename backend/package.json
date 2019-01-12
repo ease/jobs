@@ -1,0 +1,37 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Jobs portal backend with NodeJS (Express)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ease/jobs.git"
+  },
+  "keywords": [
+    "jobs",
+    "job",
+    "board",
+    "job",
+    "portal",
+    "VueJS",
+    "job",
+    "portal"
+  ],
+  "author": "https://github.com/ease",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ease/jobs/issues"
+  },
+  "homepage": "https://github.com/ease/jobs#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.5",
+    "nodemon": "^1.18.3"
+  }
+}
