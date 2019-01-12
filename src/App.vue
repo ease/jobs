@@ -1,29 +1,79 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <div class="main-content">
+            <header>
+            <!-- Logo position <img src="./assets/logo.png" alt="Vue.js PWA" height="42" width="42"> -->
+              <app-header></app-header>
+            </header>
+            <main>
+                <router-view></router-view>
+            </main>
+        </div>
     </div>
-    <router-view/>
-  </div>
 </template>
 
+<script>
+import AppHeader from './components/Header';
+
+export default {
+  name: 'app',
+  components: {
+    AppHeader: AppHeader
+  }
+};
+</script>
+
 <style lang="scss">
+@import './common/styles/common';
+
+body {
+  margin: 0;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: $main-font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+
+.main-content {
+  display: grid;
+  grid-template-columns: 170px auto auto;
+  grid-template-rows: 60px 1fr;
+}
+header {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  position: fixed;
+  width: 100%;
+}
+main {
+  text-align: center;
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  // .main-content {
+  //   display: grid;
+  //   grid-template-columns: 200px 1fr 200px;
+  //   grid-template-rows: 60px 1fr;
+  // }
+  // header {
+  //   grid-column: 1/3;
+  //   grid-row: 1/2;
+  //   position: fixed;
+  //   width: 100%;
+  // }
+  // main {
+  //   text-align: center;
+  //   grid-column: 1/4;
+  //   grid-row: 2/3;
+  // }
+}
+
+a {
+  text-decoration: none;
 }
 </style>

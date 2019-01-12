@@ -11,3 +11,13 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+// Older way:
+// Vue.config.productionTip = false
+
+// new Vue({
+//   el: '#app',
+//   router,
+//   template: '<App/>',
+//   components: { App }
+// })
